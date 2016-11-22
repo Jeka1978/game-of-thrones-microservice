@@ -11,6 +11,7 @@ import java.util.Map;
 @Builder
 @Getter
 @Setter
+@ToString
 public class User {
     private int id;
     @Singular
