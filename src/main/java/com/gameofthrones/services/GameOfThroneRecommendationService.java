@@ -5,4 +5,5 @@ package com.gameofthrones.services;
  */
 public interface GameOfThroneRecommendationService {
 
+    Season recomendSeason(int id);
 }

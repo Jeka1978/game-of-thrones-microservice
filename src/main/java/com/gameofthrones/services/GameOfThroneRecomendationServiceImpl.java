@@ -8,13 +8,10 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class GameOfThroneRecomendationServiceImpl implements GameOfThroneRecommendationService {
+    @Autowired
     private UserDao dao;
 
-    @Autowired
-    public GameOfThroneRecomendationServiceImpl(UserDao dao) {
-        this.dao = dao;
-    }
-
+    @Override
     public Season recomendSeason(int id) {
         User user = dao.findUser(id);
         if (user.getAge() < 18) {
